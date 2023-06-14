@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW" style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>圖片循環首頁</title>
+        <title>圖片循環首頁</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+            
+            #slideshow {
+                position: relative;
+                width: 400px;
+                height: 300px;
+                margin: 0 auto;
+                overflow: hidden;
+                border: 0px solid #1bf24d;
+            }
+            
+            #slideshow img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            
+            #navigation {
+                text-align: center;
+                margin-top: 20px;
+            }
+            
+            #navigation a {
+                margin: 0 10px;
+                text-decoration: none;
+                color: #1bf24d;
+                transition: opacity 0.5s ease-in-out;
+            }
+            
+            #navigation a:hover {
+                opacity: 0.7;
+            }
+            
+            button {
+                margin-top: 10px;
+                font-size: 16px;
+                padding: 5px 10px;
+                border: 1px solid #000;
+                background-color: #fff;
+                color: #000;
+                cursor: pointer;
+                transition: opacity 0.5s ease-in-out;
+            }
+            
+            button:hover {
+                opacity: 0.7;
+                
+            }
+            
+            button:active {
+            transform: translateY(1px);
+        }
+        </style>
+</head>
+
+<body  style=" height: 100%">
+    <div class=" container-fluid " id="navigation"  style="width: 100%" >  
+        <div class="img-fluid float-start ">
+              <a class="navbar-brand " href="0524.html" >
+                <img src="logo_工作區域 1_工作區域 1.png" alt="" width="150px;"  > 
+              </a>
+            </div>
+        <a href="0524.html"><u>Home</u></a>
+        <a href="about.html">About</a>
+        <a href="members.html">Members</a>
+        <a href="product.html">product</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+    
+    <div class=" container-fluid d-flex justify-content-center " id="slideshow"  style="width: 100%;height: 100%;">
+        <img src="Comp 1_00000.png" alt="圖片1">
+        <img src="Comp 1_00001.png" alt="圖片2">
+        <img src="Comp 1_00002.png" alt="圖片2">
+        <img src="Comp 1_00003.png" alt="圖片2">
+        <img src="Comp 1_00004.png" alt="圖片2">
+        <img src="Comp 1_00005.png" alt="圖片2">
+        <img src="Comp 1_00006.png" alt="圖片2">
+        <img src="Comp 1_00007.png" alt="圖片2">
+        <img src="Comp 1_00008.png" alt="圖片2">
+        <img src="Comp 1_00009.png" alt="圖片2">
+        <img src="Comp 1_00010.png" alt="圖片2">
+        <img src="Comp 1_00011.png" alt="圖片2">
+        <img src="Comp 1_00001.png" alt="圖片2">
+        <img src="Comp 1_00012.png" alt="圖片2">
+        <img src="Comp 1_00013.png" alt="圖片2">
+        <img src="Comp 1_00014.png" alt="圖片2">
+        <img src="Comp 1_00015.png" alt="圖片2">
+        <img src="Comp 1_00016.png" alt="圖片2">
+        <img src="Comp 1_00017.png" alt="圖片2">
+        <img src="Comp 1_00019.png" alt="圖片2">
+        <img src="Comp 1_00020.png" alt="圖片2">
+        <img src="Comp 1_00021.png" alt="圖片2">
+        <img src="Comp 1_00022.png" alt="圖片2">
+        <img src="Comp 1_00023.png" alt="圖片2">
+        
+
+    </div>
+    
+    <!-- <button onclick="previousSlide()">上一張</button> -->
+    <!-- <button onclick="nextSlide()">下一張</button> -->
+
+    
+       
+    </video>
+    
+    <script>
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('#slideshow img');
+        var interval = setInterval(nextSlide, 500); // 自動撥放間隔為3秒
+        
+        function showSlide(n) {
+        slides[currentSlide].style.opacity = 1;
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].style.opacity = 1;
+    }
+    
+    function previousSlide() {
+        clearInterval(interval); // 清除自動撥放的間隔
+        showSlide(currentSlide - 1);
+    }
+    
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
